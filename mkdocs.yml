@@ -1,0 +1,4 @@
+site_name: Nice Tracker Documentation
+theme:
+    name: readthedocs
+    highlightjs: false
