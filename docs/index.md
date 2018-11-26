@@ -1,4 +1,8 @@
-Documentation Version: `3.1.0`
+Documentation Version: `3.2.0`
+
+# Website
+
+[Nice Sex Tracker](https://nicetracker.app)
 
 ## URL Scheme
 You can access Nice Tracker via the URL Scheme:
@@ -26,6 +30,7 @@ nicetraker://add
 |`longitude`| | decimal | longitude of location |
 
 **Note:** If `location` is set, then `latitude` and `longitude` will be _ignored_.
+**Note:** You can only add `partners` and `activities` that currently exist within the app.
 
 <h3>URL Examples</h3>
 Example of adding 5 minutes if sex now
@@ -91,6 +96,7 @@ The format of the backup JSON file looks like:
 |`birthday`| | string | DOB in the format of `yyyy-MM-dd` |
 |`sexInt`| | integer | `0` = Male, `1` = Female, `2` = Other |
 |`image`| | string | base64 encoded string of png image data |
+|`note`| | string | note for the partner |
 
 **Note:** The short version of the partner object only includes the `name` parameter.
 
@@ -101,7 +107,7 @@ The format of the backup JSON file looks like:
 |`latitude`|Y| decimal | valid latitude |
 |`longitude`|Y| decimal | valid longitude |
 
-**Note:** In an entry object with a custom location, and the `latitude` and `longitude` parameters will exist.
+**Note:** In an entry object with a custom location that isn't added to the `locations`, then `latitude` and `longitude` parameters will exist, otherwise only the `name` parameter will exist.
 
 ## Siri Shortcuts
 
