@@ -1,4 +1,4 @@
-Documentation Version: `3.2.0`
+Documentation Version: `3.3.0`
 
 # Website
 
@@ -16,6 +16,7 @@ nicetraker://add
 ```
 
 <h3>URL Parameters</h3>
+
 |parameter| required | value | description |
 |:---|:---:|:---:|:---|
 |`activities`|Y| string |comma delimited, url encoded, list of activities' names |
@@ -28,6 +29,7 @@ nicetraker://add
 |`location`| | string | name of a saved location |
 |`latitude`| | decimal | latitude of location |
 |`longitude`| | decimal | longitude of location |
+|`orgasms`| | integer | number of orgasms |
 
 **Note:** If `location` is set, then `latitude` and `longitude` will be _ignored_.
 **Note:** You can only add `partners` and `activities` that currently exist within the app.
@@ -70,6 +72,7 @@ The format of the backup JSON file looks like:
 ```
 
 <h4>Entry JSON Object</h4>
+
 |parameter| required | value | description |
 |:---|:---:|:---:|:---|
 |`activities`|Y| array of objects | array of short activity objects |
@@ -80,16 +83,19 @@ The format of the backup JSON file looks like:
 |`note`| | string | note for the entry |
 |`icon`| | string | name of the entry's icon |
 |`location`| | object | location object |
+|`orgasms`| | integer | number of orgasms |
 
 <h4>Activity JSON Object</h4>
+
 |parameter| required | value | description |
 |:---|:---:|:---:|:---|
 |`name`|Y| string | unique activity name |
-|`icon`|Y| string |name of icon |
+|`icon`|Y| string | name of icon |
 
 **Note:** The short version of the activity object only includes the `name` parameter.
 
 <h4>Partner JSON Object</h4>
+
 |parameter| required | value | description |
 |:---|:---:|:---:|:---|
 |`name`|Y| string | unique partner name |
@@ -101,6 +107,7 @@ The format of the backup JSON file looks like:
 **Note:** The short version of the partner object only includes the `name` parameter.
 
 <h4>Location JSON Object</h4>
+
 |parameter| required | value | description |
 |:---|:---:|:---:|:---|
 |`name`|Y| string | unique location name |
