@@ -1,4 +1,4 @@
-Documentation Version: `3.3.0`
+Documentation Version: `3.7.0`
 
 # Website
 
@@ -30,6 +30,7 @@ nicetraker://add
 |`latitude`| | decimal | latitude of location |
 |`longitude`| | decimal | longitude of location |
 |`orgasms`| | integer | number of orgasms |
+|`rating`| | integer | rating score 1-5 |
 
 **Note:** If `location` is set, then `latitude` and `longitude` will be _ignored_.
 **Note:** You can only add `partners` and `activities` that currently exist within the app.
@@ -84,6 +85,7 @@ The format of the backup JSON file looks like:
 |`icon`| | string | name of the entry's icon |
 |`location`| | object | location object |
 |`orgasms`| | integer | number of orgasms |
+|`rating`| | integer | rating 1-5 |
 
 <h4>Activity JSON Object</h4>
 
