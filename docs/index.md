@@ -152,3 +152,6 @@ After you have created the shortcut, be sure to edit the shortcut options to 'Ad
 |penis|woman|man|orgy|
 |fortune|beer|wine|handcuffs|
 |mountains|tent|bath|strawberry|
+|foot|goo|rope|briefs|
+|dice|present|mask|sun|
+|moon|butt|plug|exclamation|
