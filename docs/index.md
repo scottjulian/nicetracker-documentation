@@ -1,4 +1,4 @@
-Documentation Version: `3.7.2`
+Documentation Version: `4.0.0`
 
 # Website
 
@@ -7,12 +7,12 @@ Documentation Version: `3.7.2`
 ## URL Scheme
 You can access Nice Tracker via the URL Scheme:
 ```
-nicetraker://
+nicetracker://
 ```
 
 You can add a new entry by using the `add` host:
 ```
-nicetraker://add
+nicetracker://add
 ```
 
 <h3>URL Parameters</h3>
@@ -69,6 +69,9 @@ The format of the backup JSON file looks like:
     ],
     "entries":[
         // array of entry objects
+    ],
+    "tests":[
+        // array of std/sti test objects
     ]
 }
 ```
@@ -107,6 +110,10 @@ The format of the backup JSON file looks like:
 |`sexInt`| | integer | `0` = Male, `1` = Female, `2` = Other |
 |`image`| | string | base64 encoded string of png image data |
 |`note`| | string | note for the partner |
+|`phone`| | string | string representation of a phone number |
+|`std`| | string | comma delimited, url encoded, list of STDs/STIs|
+|`tests`| | string | array of test json objects |
+
 
 **Note:** The short version of the partner object only includes the `name` parameter.
 
@@ -119,6 +126,14 @@ The format of the backup JSON file looks like:
 |`longitude`|Y| decimal | valid longitude |
 
 **Note:** In an entry object with a custom location that isn't added to the `locations`, then `latitude` and `longitude` parameters will exist, otherwise only the `name` parameter will exist.
+
+<h4>STD/STI Test JSON Object</h4>
+
+|parameter| required | value | description |
+|:---|:---:|:---:|:---|
+|`testDate`|Y| string | date in the format of `yyyy-MM-dd` |
+|`result`|Y| boolean | `true` or `false` |
+|`std`|Y| string | comma delimited, url encoded, list of STDs/STIs |
 
 ## Siri Shortcuts
 
