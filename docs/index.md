@@ -1,4 +1,4 @@
-Documentation Version: `4.0.0`
+Documentation Version: `4.4.0`
 
 # Website
 
@@ -32,6 +32,7 @@ nicetracker://add
 |`orgasms`| | integer | number of orgasms |
 |`partnerOrgasms`| | integer | number of partner orgasms |
 |`rating`| | integer | rating score 1-5 |
+|`tags`| | string | comma delimited, url encoded, list of tags' names |
 
 **Note:** If `location` is set, then `latitude` and `longitude` will be _ignored_.
 **Note:** You can only add `partners` and `activities` that currently exist within the app.
@@ -72,6 +73,9 @@ The format of the backup JSON file looks like:
     ],
     "tests":[
         // array of std/sti test objects
+    ],
+    "tags":[
+        // array of tag objects
     ]
 }
 ```
@@ -91,6 +95,7 @@ The format of the backup JSON file looks like:
 |`orgasms`| | integer | number of orgasms |
 |`partnerOrgasms`| | integer | number of partner orgasms |
 |`rating`| | integer | rating 1-5 |
+|`tags`| | array of objects | array of tag objects |
 
 <h4>Activity JSON Object</h4>
 
@@ -113,6 +118,7 @@ The format of the backup JSON file looks like:
 |`phone`| | string | string representation of a phone number |
 |`std`| | string | comma delimited, url encoded, list of STDs/STIs|
 |`tests`| | string | array of test json objects |
+|`tags`| | array of objects | array of tag objects |
 
 
 **Note:** The short version of the partner object only includes the `name` parameter.
@@ -127,13 +133,19 @@ The format of the backup JSON file looks like:
 
 **Note:** In an entry object with a custom location that isn't added to the `locations`, then `latitude` and `longitude` parameters will exist, otherwise only the `name` parameter will exist.
 
-<h4>STD/STI Test JSON Object</h4>
+<h4>Pregnancy/STD/STI Test JSON Object</h4>
 
 |parameter| required | value | description |
 |:---|:---:|:---:|:---|
 |`testDate`|Y| string | date in the format of `yyyy-MM-dd` |
 |`result`|Y| boolean | `true` or `false` |
 |`std`|Y| string | comma delimited, url encoded, list of STDs/STIs |
+
+<h4>Tag JSON Object</h4>
+
+|parameter| required | value | description |
+|:---|:---:|:---:|:---|
+|`name`|Y| string | unique name of tag |
 
 ## Siri Shortcuts
 
